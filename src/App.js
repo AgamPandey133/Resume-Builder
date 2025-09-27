@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import Resume from "./Resume";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+function App(){
+    const resume = {
+        name: "Agam Pandey",
+        title: "Software Development",
+        experience: [
+            {year: "2024", company: "Microsoft", role: "Intern"},
+            {year: "2023", company: "OpenAI", role: "Research Assistant"},
+            {year: "2022", company:"Google", role: "Frontend Developer"}
+        ],
+        education:[
+            { year: "2027", degree: "B.Tech IT", school: "IIIT Una" },
+            { year: "2023", degree: "Class 12", school: "ABC School" }
+        ],
+        skills: ["React.js", "Node.js", "C++", "Java"]
+    };
+
+    return <Resume data={resume}/>
 }
 
 export default App;
